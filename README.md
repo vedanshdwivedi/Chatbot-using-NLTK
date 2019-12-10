@@ -15,3 +15,18 @@ The NLTK data package includes a pre-trained Punkt tokenizer for English.
 [+] Removing Stop words. Sometimes, some extremely common words which would appear to be of little value in helping select documents matching a user need are excluded from the vocabulary entirely. These words are called stop words
 [+] Stemming: Stemming is the process of reducing inflected (or sometimes derived) words to their stem, base or root form — generally a written word form. Example if we were to stem the following words: “Stems”, “Stemming”, “Stemmed”, “and Stemtization”, the result would be a single word “stem”.
 [+] Lemmatization: A slight variant of stemming is lemmatization. The major difference between these is, that, stemming can often create non-existent words, whereas lemmas are actual words. So, your root stem, meaning the word you end up with, is not something you can just look up in a dictionary, but you can look up a lemma. Examples of Lemmatization are that “run” is a base form for words like “running” or “ran” or that the word “better” and “good” are in the same lemma so they are considered the same
+
+
+[+] TF-IDF Approach : 
+    TF : TERM FREQUENCY, (How frequent a word appears in a document)
+    IDF : INVERSE DOCUMENT FREQUENCY (How rare a word is across documents)
+    
+    TF = (Number of times term t appears in a document)/(Number of terms in the document)
+    IDF = 1+log(N/n), where, N is the number of documents and n is the number of documents a term t has appeared in.
+    
+[+] Cosine Similarity : 
+    Cosine similarity is a measure of similarity between two non-zero vectors. Using this formula we can find out the similarity between any two documents d1 and d2.
+    Cosine Similarity (d1, d2) =  Dot product(d1, d2) / ||d1|| * ||d2||
+    where d1 and d2 are two non-zero vectors
+    
+    
