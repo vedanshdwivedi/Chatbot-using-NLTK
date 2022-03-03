@@ -90,8 +90,78 @@ add();
 
 console.log("\n ARRAY FUNCTIONS \n\n");
 
-const newShoppingList = ["Chocolates", "Milk", "Bread"]
+const newShoppingList = ["Chocolates", "Milk", "Bread"];
 
-newShoppingList.forEach((item)=>{
-    console.log(item);
-})
+newShoppingList.forEach((item, index) => {
+  console.log(`The product at index ${index} is ${item}`);
+});
+
+// -----------------------------------------------------------
+// Map : Used to take an array, make a copy of it and modify it however we want
+
+const newList = newShoppingList.map((item) => {
+  return item + " new";
+});
+
+console.log(newList);
+
+const filterList = newShoppingList.filter((item) => {
+  return item === "Milk";
+});
+
+console.log(filterList);
+
+// -----------------------------------------------------------
+// Constructors
+
+console.log("\nClass \n\n");
+
+class ShoppingListClass {
+  constructor(items, quantity) {
+    this.items = items;
+    this.quantity = quantity;
+  }
+
+  sayList() {
+    console.log(this.items);
+  }
+}
+
+// const shopObject = new ShoppingListClass(["Milk", "Chocolate"], 3);
+
+class Product extends ShoppingListClass {
+  constructor(items, quantity, amount, cost) {
+    super(items, quantity);
+    this.amount = amount;
+    this.cost = cost;
+  }
+}
+
+const productObject = new Product(["Milk", "Soda", "Candy"], 3, 4, 5);
+
+productObject.sayList();
+
+// -----------------------------------------------------------
+// Promise
+
+console.log("\nPROMISE\n\n");
+
+console.log(1);
+const prom = new Promise((resolve, reject) => {
+  // Everything here is Async
+  setTimeout(() => {
+    // resolve(200);
+    reject("This is an error");
+  }, 2000);
+});
+console.log(2);
+
+prom
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+console.log(3);
